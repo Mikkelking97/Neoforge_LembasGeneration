@@ -1,0 +1,11 @@
+{
+  "variants":
+  {
+    "":
+    {
+      "model": "mrt:block/forge_block"
+    }
+  }
+
+
+}

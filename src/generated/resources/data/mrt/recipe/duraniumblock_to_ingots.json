@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mrt:duranium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "mrt:duranium_ingot"
+  }
+}

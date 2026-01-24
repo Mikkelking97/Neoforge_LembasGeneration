@@ -1,0 +1,8 @@
+// 1.21.1	2026-01-23T20:20:55.364824	Tags for minecraft:item mod id mrt
+db1c4461870f5087f1cabbfd1707d4196916b82e data/minecraft/tags/item/axes.json
+63836227f02f7385e1220a530ef8e301cd52a8ec data/minecraft/tags/item/hoes.json
+7d59ce43b1de2afce801758ff3634f5eeedf6450 data/minecraft/tags/item/pickaxes.json
+a28e36986c7641fa0364f01d097323daada77b64 data/minecraft/tags/item/shovels.json
+df87389273dc2bee486babced6f299f850d6a706 data/minecraft/tags/item/swords.json
+f69c34302f8297df8e01eee87cb937e657b0b27e data/minecraft/tags/item/trimmable_armor.json
+e6afa292965b67c3ff066744f25f5fa9620d9352 data/mrt/tags/item/transformable_items.json

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "tag": "minecraft:flowers"
+    },
+    "G": {
+      "item": "minecraft:short_grass"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "FGF",
+    "GRG",
+    "FGF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mrt:potion_primer"
+  }
+}

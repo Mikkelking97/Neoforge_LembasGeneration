@@ -1,0 +1,59 @@
+{
+  "item.mrt.lembas_bread": "Lembas",
+  "item.mrt.inverted_lembas": "InvertedLembas",
+  "item.mrt.duranium_ore": "Duranium Ore",
+  "item.mrt.duranium_ingot": "Duranium Ingot",
+  "item.mrt.duranium_clump": "Duranium Clump",
+  "item.mrt.rough_duranium_ingot": "Rough Duranium Ingot",
+  "item.mrt.tempered_duranium_ingot": "Tempered Duranium Ingot",
+  "item.mrt.tong": "Tong",
+  "item.mrt.forge_hammer": "Forge hammer",
+
+  "item.minecraft.potion.effect.suffer_potion": "Suffering Potion",
+  "item.minecraft.splash_potion.effect.suffer_potion": "Suffering Splash Potion",
+  "item.minecraft.lingering_potion.effect.suffer_potion": "Suffering Lingering Potion",
+
+  "item.minecraft.potion.effect.astraltravel_potion": "Astral Travel Potion",
+  "item.minecraft.splash_potion.effect.astraltravel_potion": "Astral Travel Splash Potion",
+  "item.minecraft.lingering_potion.effect.astraltravel_potion": "Astral Travel Lingering Potion",
+
+  "item.minecraft.potion.effect.lightninginbottle_potion": "Lightning in a bottle",
+  "item.minecraft.splash_potion.effect.lightninginbottle_potion": "Lightning in a Splash bottle",
+  "item.minecraft.lingering_potion.effect.lightninginbottle_potion": "Lightning in a Lingering bottle",
+
+  "item.mrt.duranium_pickaxe": "Duranium Pickaxe",
+  "item.mrt.duranium_sword": "Duranium Sword",
+  "item.mrt.duranium_axe": "Duranium Axe",
+  "item.mrt.duranium_shovel": "Duranium Shovel",
+  "item.mrt.duranium_hoe": "Duranium Hoe",
+
+  "item.mrt.duranium_helmet": "Duranium Helmet",
+  "item.mrt.duranium_chestplate": "Duranium Chestplate",
+  "item.mrt.duranium_leggings": "Duranium Leggings",
+  "item.mrt.duranium_boots": "Duranium Boots",
+
+  "block.mrt.duranium_block": "Duranium Block",
+  "block.mrt.duranium_ore": "Duranium Ore",
+  "block.mrt.forge_block": "Forge",
+
+  "item.mrt.potion_primer": "Potion Primer",
+  "effect.mrt.suffer": "Suffer",
+  "effect.mrt.astraltravel": "Astral Travel",
+  "effect.mrt.lightning" : "Lightning",
+  "item.mrt.alchemist_coal": "Alchemist Coal",
+
+
+  "tooltip.lembasbreadmod.duraniumpickaxe": "§nMade of ores hidden in the deep",
+  "tooltip.lembasbreadmod.duraniumsword": "§nMade of ores hidden in the deep",
+  "tooltip.lembasbreadmod.duraniumshovel": "§nMade of ores hidden in the deep",
+  "tooltip.lembasbreadmod.duraniumaxe": "§nMade of ores hidden in the deep",
+  "tooltip.lembasbreadmod.duraniumhoe": "§nMade of ores hidden in the deep",
+
+  "tooltip.lembasbreadmod.duranium_chestplate": "§nMade of ores hidden in the deep",
+  "tooltip.lembasbreadmod.duranium_clump": "It hums faintly - as though it dreams of its deeper self",
+  "tooltip.lembasbreadmod.rough_duranium_ingot": "The fire reveals what the stone had buried - a heart not yet tamed",
+  "tooltip.lembasbreadmod.tempered_duranium_ingot": "Shaped by flame and will",
+  "tooltip.lembasbreadmod.duranium_ingot": "You did not craft this. You merely released it",
+  "tooltip.lembasbreadmod.astraltravel_potion": "Separates flesh from spirit - briefly §k asd",
+  "tooltip.lembas_bread": "Keeps you going for a long time"
+}

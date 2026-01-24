@@ -1,0 +1,5 @@
+// 1.21.1	2025-07-15T19:56:33.1699668	Tags for minecraft:block mod id mrt
+dec06e47ad7fc4a6d9ac12e97f2f21905f81604d data/minecraft/tags/block/mineable/pickaxe.json
+934a82107a8b95c54e7d60cbffb3dd15a55c3211 data/minecraft/tags/block/needs_diamond_tool.json
+cc76284180c761d67cba71d6262790326827ced8 data/mrt/tags/block/incorrect_for_duranium_tool.json
+2880bb029f8e7f32d86d8b3a81123b4ab367d99b data/mrt/tags/block/needs_duranium_tool.json

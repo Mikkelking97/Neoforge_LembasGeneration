@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_durium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mrt:duranium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mrt:duranium_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_durium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mrt:duranium_block"
+    ]
+  }
+}

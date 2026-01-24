@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_duraniumclump": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mrt:duranium_clump"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mrt:clump_to_rough_duranium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_duraniumclump"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mrt:clump_to_rough_duranium"
+    ]
+  }
+}

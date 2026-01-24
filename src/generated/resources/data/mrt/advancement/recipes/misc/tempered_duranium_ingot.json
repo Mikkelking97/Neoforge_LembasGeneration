@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mrt:tempered_duranium_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "roughduraniumingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mrt:rough_duranium_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "roughduraniumingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mrt:tempered_duranium_ingot"
+    ]
+  }
+}

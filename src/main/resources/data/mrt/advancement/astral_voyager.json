@@ -1,0 +1,36 @@
+{
+  "display":
+  {
+    "icon":
+    {
+      "id": "mrt:inverted_lembas"
+    },
+    "title": "Astral Voyager",
+    "description": "You walk unseen between worlds, yet the earth waits to reclaim you",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "mrt:root",
+  "criteria":
+  {
+    "requirement":
+    {
+      "trigger": "minecraft:consume_item",
+      "conditions":
+      {
+        "item":
+        {
+          "items":
+                  [
+                    "mrt:astraltravel_potion"
+                  ]
+        },
+        "source":
+        {
+          "type": "minecraft:potion"
+        }
+      }
+    }
+  }
+}

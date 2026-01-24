@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.mikkel.mrt.mixins",
+  "refmap": "mixins.mrt.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["Brewingstand_Mixin", "BrewingstandMenu_Mixin"],
+  "client": [ ]
+}

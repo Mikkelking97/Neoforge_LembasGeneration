@@ -1,0 +1,38 @@
+{
+  "display":
+  {
+    "icon":
+    {
+      "id": "mrt:potion_primer"
+    },
+    "title": "Discover the outcasts",
+    "description": "Why where they banished from the village?",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "mrt:root",
+  "criteria":
+  {
+    "in_swamp_hut":
+    {
+      "trigger": "minecraft:location",
+      "conditions":
+      {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate":
+            {
+              "location":
+              {
+                "structures": "minecraft:swamp_hut"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

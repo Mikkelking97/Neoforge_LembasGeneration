@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 500,
+  "experience": 5.0,
+  "ingredient": {
+    "item": "mrt:duranium_clump"
+  },
+  "result": {
+    "count": 1,
+    "id": "mrt:rough_duranium_ingot"
+  }
+}

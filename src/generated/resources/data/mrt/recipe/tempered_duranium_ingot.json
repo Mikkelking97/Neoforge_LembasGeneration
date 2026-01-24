@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1000,
+  "experience": 5.0,
+  "ingredient": {
+    "item": "mrt:rough_duranium_ingot"
+  },
+  "result": {
+    "count": 1,
+    "id": "mrt:tempered_duranium_ingot"
+  }
+}

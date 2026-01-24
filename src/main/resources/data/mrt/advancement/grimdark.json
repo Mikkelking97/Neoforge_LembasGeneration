@@ -1,0 +1,34 @@
+{
+  "display":
+  {
+    "icon":
+    {
+      "id": "mrt:duranium_clump"
+    },
+    "title": "Obtained the impossible",
+    "description": "It should never have been found",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "mrt:root",
+  "criteria":
+  {
+    "requirement":
+    {
+      "trigger": "minecraft:inventory_changed",
+      "conditions":
+      {
+        "items":
+        [
+          {
+            "items":
+            [
+              "mrt:duranium_clump"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
