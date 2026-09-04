@@ -4,6 +4,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.mikkel.mrt.LembasBreadMod;
 import net.mikkel.mrt.item.ModItems;
 import net.mikkel.mrt.potion.ModPotions;
+import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.npc.WanderingTrader;
@@ -17,6 +18,7 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
 
@@ -33,11 +35,16 @@ public class ModEvents
 
         builder.addMix(Potions.AWKWARD, Items.WITHER_SKELETON_SKULL, ModPotions.SUFFER_POTION);
         builder.addMix(Potions.WATER, ModItems.POTIONPRIMER.get(), Potions.AWKWARD);
-
         builder.addMix(Potions.AWKWARD, Items.NETHER_STAR, ModPotions.ASTRALTRAVEL_POTION);
+
+        //Flight Potions
+        builder.addMix(Potions.LEAPING, Items.FEATHER, ModPotions.LESSER_FLIGHT_POTION);
+        builder.addMix(ModPotions.LESSER_FLIGHT_POTION, Items.WIND_CHARGE, ModPotions.GREATER_FLIGHT_POTION);
+        builder.addMix(ModPotions.GREATER_FLIGHT_POTION, Items.PHANTOM_MEMBRANE, ModPotions.SUPREME_FLIGHT_POTION);
+
     }
 
-    //Normal Traders
+    // Normal Traders
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event)
     {
@@ -128,9 +135,28 @@ public class ModEvents
                     new ItemStack(ModItems.LEMBASBREAD.get(), 3), 6, 300, 0.05f));
         }
 
-
     }
 
+    //Villager passive healing
+    /*@SubscribeEvent
+    public static void onEntityTick(EntityTickEvent.Post event)
+    {
+        if (!(event.getEntity() instanceof Villager villager))
+            return;
+
+        //Heal every 10 seconds
+        if (villager.tickCount % 200 == 0)
+        {
+            //Debug to verify it works.
+            System.out.println("Villager HP: " + villager.getHealth());
+
+            if(villager.getHealth() < villager.getMaxHealth())
+            {
+                villager.heal(1.0f);
+                System.out.println("After heal: " + villager.getHealth());
+            }
+        }
+    }*/
 
     //Wandering Trader
     @SubscribeEvent

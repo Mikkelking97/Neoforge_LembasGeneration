@@ -7,6 +7,8 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.InstantenousMobEffect;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
@@ -36,6 +38,23 @@ public class ModPotions
     //Lightning Potion
     public static final Holder<Potion> LIGHTNINGINBOTTLE = POTIONS.register("lightninginbottle_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.LIGHTNINGINBOTTLE, 1200, 0)));
+
+    //Biome_Soulsand_Valley Potion
+    //public static final Holder<Potion> SOUL_VALLEY_POTION = POTIONS.register("soul_valley_potion"),
+    //() -> new Potion (new MobEffectInstance(ModEffects.SOUL_VALLEY_POTION, 1, 1, 0));
+
+    //Flight Potions
+    public static final Holder<Potion> SUPREME_FLIGHT_POTION = POTIONS.register("supreme_flight_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.SUPREME_FLIGHT_EFFECT, 400, 0)));
+
+    public static final Holder<Potion> GREATER_FLIGHT_POTION = POTIONS.register("greater_flight_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.GREATER_FLIGHT_EFFECT, 200, 0),
+            new MobEffectInstance(MobEffects.WEAKNESS, 200, 0)));
+
+    public static final Holder<Potion> LESSER_FLIGHT_POTION = POTIONS.register("lesser_flight_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.LESSER_FLIGHT_EFFECT, 100, 0),
+            new MobEffectInstance(MobEffects.WEAKNESS, 100, 0),
+                    new MobEffectInstance(MobEffects.BLINDNESS, 100, 0)));
 
     /*//BONEMEALPOTION AKA FLOURISHING POTION
     public static final Holder<Potion> FLOURISHING_POTION = POTIONS.register("flourishing_potion",

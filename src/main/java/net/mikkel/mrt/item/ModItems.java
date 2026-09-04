@@ -2,8 +2,11 @@ package net.mikkel.mrt.item;
 
 import net.mikkel.mrt.LembasBreadMod;
 import net.mikkel.mrt.item.custom.FuelItem;
+import net.mikkel.mrt.item.custom.ModArmorItem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
@@ -21,8 +24,9 @@ public class ModItems
 
     public  static final DeferredItem<Item> LEMBASBREAD = ITEMS.register("lembas_bread",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder()
-                    .nutrition(10)
+                    .nutrition(30)
                     .saturationModifier(30)
+                    .effect(() -> new MobEffectInstance(MobEffects.SATURATION, 6000, 5), 1.0f)
                     .build()))
 
             {
@@ -207,7 +211,7 @@ public class ModItems
     //Registering Armour
     //Helmet
 public static  final DeferredItem<ArmorItem> DURANIUM_HELMET = ITEMS.register("duranium_helmet",
-            () -> new ArmorItem(ModArmorMaterials.DURANIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.DURANIUM_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties()
                             .rarity(Rarity.EPIC)
                             .durability(ArmorItem.Type.HELMET.getDurability(600))));

@@ -35,7 +35,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.DURANIUM_ORE.get(), ModItems.DURANIUMCLUMP.get()));
         add(ModBlocks.DURANIUM_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.DURANIUM_ORE.get(),
-                        ModItems.DURANIUMCLUMP.get(), 2, 5));
+                        ModItems.DURANIUMCLUMP.get(), 1, 1));
 
     }
 

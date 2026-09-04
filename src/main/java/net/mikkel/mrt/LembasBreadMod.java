@@ -35,7 +35,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
-import static net.mikkel.mrt.potion.ModPotions.ASTRALTRAVEL_POTION;
+import static net.mikkel.mrt.potion.ModPotions.*;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(LembasBreadMod.MODID)
@@ -138,11 +138,24 @@ public class LembasBreadMod
                             .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
 
             }
-            //Add more potion tooltiops here.
-            /*else if (potion.is())
-            {
 
-            }*/
+            else if (potion.is(LESSER_FLIGHT_POTION))
+            {
+                event.getToolTip().add(2, Component.translatable("tooltip.lembasbreadmod.lesser_flight_potion")
+                        .withStyle(ChatFormatting.DARK_GRAY, ChatFormatting.ITALIC));
+            }
+
+            else if (potion.is(GREATER_FLIGHT_POTION))
+            {
+                event.getToolTip().add(2, Component.translatable("tooltip.lembasbreadmod.greater_flight_potion")
+                        .withStyle(ChatFormatting.GOLD, ChatFormatting.ITALIC));
+            }
+
+            else if (potion.is(SUPREME_FLIGHT_POTION))
+            {
+                event.getToolTip().add(2, Component.translatable("tooltip.lembasbreadmod.supreme_flight_potion")
+                        .withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.OBFUSCATED));
+            }
         }
 
     }

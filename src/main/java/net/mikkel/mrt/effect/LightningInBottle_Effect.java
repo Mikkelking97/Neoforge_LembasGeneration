@@ -29,7 +29,7 @@ public class LightningInBottle_Effect extends InstantenousMobEffect
                 entity.level().addFreshEntity(lightning);
             }
         }
-        return false;
+        return false; //should be return false
     }
 
 }

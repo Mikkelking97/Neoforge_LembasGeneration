@@ -21,6 +21,18 @@
   "item.minecraft.splash_potion.effect.lightninginbottle_potion": "Lightning in a Splash bottle",
   "item.minecraft.lingering_potion.effect.lightninginbottle_potion": "Lightning in a Lingering bottle",
 
+  "item.minecraft.potion.effect.lesser_flight_potion": "Potion of Lesser Flight",
+  "item.minecraft.splash_potion.effect.lesser_flight_potion": "Potion of Lesser Flight",
+  "item.minecraft.lingering_potion.effect.lesser_flight_potion": "Potion of Lesser Flight",
+
+  "item.minecraft.potion.effect.greater_flight_potion": "Potion of Greater Flight",
+  "item.minecraft.splash_potion.effect.greater_flight_potion": "Potion of Greater Flight",
+  "item.minecraft.lingering_potion.effect.greater_flight_potion": "Potion of Greater Flight",
+
+  "item.minecraft.potion.effect.supreme_flight_potion": "Potion of Supreme Flight",
+  "item.minecraft.splash_potion.effect.supreme_flight_potion": "Potion of Supreme Flight",
+  "item.minecraft.lingering_potion.effect.supreme_flight_potion": "Potion of Supreme Flight",
+
   "item.mrt.duranium_pickaxe": "Duranium Pickaxe",
   "item.mrt.duranium_sword": "Duranium Sword",
   "item.mrt.duranium_axe": "Duranium Axe",
@@ -41,6 +53,10 @@
   "effect.mrt.astraltravel": "Astral Travel",
   "effect.mrt.lightning" : "Lightning",
   "item.mrt.alchemist_coal": "Alchemist Coal",
+  "effect.mrt.soulvalley_potion": "biomesoulsandvalley_potion",
+  "effect.mrt.supreme_flight_potion": "Supreme Flight",
+  "effect.mrt.greater_flight_potion": "Greater Flight",
+  "effect.mrt.lesser_flight_potion": "Lesser Flight",
 
 
   "tooltip.lembasbreadmod.duraniumpickaxe": "§nMade of ores hidden in the deep",
