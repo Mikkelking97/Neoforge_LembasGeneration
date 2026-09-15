@@ -11,6 +11,7 @@ import net.minecraft.world.entity.npc.WanderingTrader;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.trading.ItemCost;
@@ -41,6 +42,16 @@ public class ModEvents
         builder.addMix(Potions.LEAPING, Items.FEATHER, ModPotions.LESSER_FLIGHT_POTION);
         builder.addMix(ModPotions.LESSER_FLIGHT_POTION, Items.WIND_CHARGE, ModPotions.GREATER_FLIGHT_POTION);
         builder.addMix(ModPotions.GREATER_FLIGHT_POTION, Items.PHANTOM_MEMBRANE, ModPotions.SUPREME_FLIGHT_POTION);
+
+        //Hero of the Village Potion
+        builder.addMix(Potions.AWKWARD, Items.EMERALD_BLOCK, ModPotions.HERO_POTION_I);
+        builder.addMix(ModPotions.HERO_POTION_I, Items.COPPER_BLOCK, ModPotions.HERO_POTION_II);
+        builder.addMix(ModPotions.HERO_POTION_II, Items.IRON_BLOCK, ModPotions.HERO_POTION_III);
+        builder.addMix(ModPotions.HERO_POTION_III, Items.GOLD_BLOCK, ModPotions.HERO_POTION_IV);
+        builder.addMix(ModPotions.HERO_POTION_IV, Items.DIAMOND_BLOCK, ModPotions.HERO_POTION_V);
+
+        //Potion of Liquid LUck
+        builder.addMix(Potions.AWKWARD, Items.FISHING_ROD, ModPotions.LIQUID_LUCK_I);
 
     }
 
@@ -135,6 +146,21 @@ public class ModEvents
                     new ItemStack(ModItems.LEMBASBREAD.get(), 3), 6, 300, 0.05f));
         }
 
+        if(event.getType() == VillagerProfession.FISHERMAN)
+        {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            trades.get(3).add((entity, randomSource) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 50),
+                    new ItemStack(Items.HEART_OF_THE_SEA, 1), 2, 500, 2));
+
+            trades.get(3).add((entity, randomSource) -> new MerchantOffer(
+            new ItemCost(Items.EMERALD, 48),
+                    new ItemStack(Items.NAUTILUS_SHELL, 3), 3, 500, 3));
+
+
+        }
+
     }
 
     //Villager passive healing
@@ -167,11 +193,15 @@ public class ModEvents
 
         genericTrades.add((entity, randomSource) -> new MerchantOffer(
                 new ItemCost(Items.EMERALD, 38),
-                new ItemStack(Items.BLAZE_ROD, 1), 2, 100, 0.2f));
+                new ItemStack(Items.BLAZE_ROD, 1), 2, 1000, 0.2f));
 
         rareTrades.add((entity, randomSource) -> new MerchantOffer(
                 new ItemCost(Items.NETHERITE_INGOT, 1),
                 new ItemStack(ModItems.DURANIUMCLUMP.get(), 7), 2, 1000, 0.2f));
+
+        genericTrades.add((entity, randomSource) -> new MerchantOffer(
+                new ItemCost(Items.EMERALD, 9),
+                new ItemStack(Items.TORCHFLOWER_SEEDS, 2), 1, 2000, 2));
     }
 
 

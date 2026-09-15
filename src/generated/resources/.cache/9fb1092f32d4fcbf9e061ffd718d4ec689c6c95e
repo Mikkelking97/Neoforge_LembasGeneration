@@ -1,10 +1,14 @@
-// 1.21.1	2026-01-23T20:36:15.6640285	Recipes
+// 1.21.1	2026-09-15T13:36:00.1095403	Recipes
 ceaa827b6dde433d081a9db30899b5ff40e308a6 data/minecraft/advancement/recipes/brewing/alchemistcoal_from_charcoal.json
 75a60829cfd8b37c3f6e68e324ca0fa5d9408cc1 data/minecraft/advancement/recipes/brewing/alchemistcoal_from_coal.json
 aeedcfc98e56ac56c5257b98b5385450768ad6a4 data/minecraft/advancement/recipes/misc/brewing_stand.json
+7660bb583ca73648a2c2cc8811a846bca04b3096 data/minecraft/advancement/recipes/misc/wither_rose_from_poppy.json
+2be232e1b29072510fd51fd6196fdf4e746267ce data/minecraft/advancement/recipes/misc/wither_rose_from_rose_bush.json
 60a1a900c19bdbbc5243857b9212188f49c939da data/minecraft/recipe/alchemistcoal_from_charcoal.json
 5417c43067bb4ed92e5907489c56d82655150e9f data/minecraft/recipe/alchemistcoal_from_coal.json
 a3a8beb6d66723f355635ef2385c584e1b39ac5f data/minecraft/recipe/brewing_stand.json
+467da0299fc22a4917af3dc4ed1d9a4414c0a26c data/minecraft/recipe/wither_rose_from_poppy.json
+39e30408fa925cedc48789586569ec946186dadc data/minecraft/recipe/wither_rose_from_rose_bush.json
 076f7a2b725553e306ae40a4741aca6aa83bc166 data/mrt/advancement/recipes/brewing/potion_primer.json
 3972d93c71d1812d92d81ee44f393c2700dc7d32 data/mrt/advancement/recipes/combat/duranium_boots.json
 c52625962dc4396e63a2b713ac9c1406d4f2464f data/mrt/advancement/recipes/combat/duranium_chestplate.json

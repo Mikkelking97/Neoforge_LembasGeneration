@@ -6,6 +6,7 @@ import net.mikkel.mrt.effect.ModEffects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.InstantenousMobEffect;
 import net.minecraft.world.effect.MobEffect;
@@ -16,6 +17,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.alchemy.Potion;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.List;
@@ -55,6 +57,26 @@ public class ModPotions
             () -> new Potion(new MobEffectInstance(ModEffects.LESSER_FLIGHT_EFFECT, 100, 0),
             new MobEffectInstance(MobEffects.WEAKNESS, 100, 0),
                     new MobEffectInstance(MobEffects.BLINDNESS, 100, 0)));
+
+    //Hero of the Village
+    public static final DeferredHolder<Potion, Potion> HERO_POTION_I = POTIONS.register("hero_potion_i",
+            () -> new Potion(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE,24000, 1)));
+
+    public static final DeferredHolder<Potion, Potion> HERO_POTION_II = POTIONS.register("hero_potion_ii",
+            () -> new Potion(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE,24000, 2)));
+
+    public static final DeferredHolder<Potion, Potion> HERO_POTION_III = POTIONS.register("hero_potion_iii",
+            () -> new Potion(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE,24000, 3)));
+
+    public static final DeferredHolder<Potion, Potion> HERO_POTION_IV = POTIONS.register("hero_potion_iv",
+            () -> new Potion(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE,24000, 4)));
+
+    public static final DeferredHolder<Potion, Potion> HERO_POTION_V = POTIONS.register("hero_potion_v",
+            () -> new Potion(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE,24000, 5)));
+
+//Potions of Luck, Looting and Fortune
+ public static final DeferredHolder<Potion, Potion> LIQUID_LUCK_I = POTIONS.register("liquid_luck_i",
+            () -> new Potion(new MobEffectInstance(MobEffects.LUCK,72000, 254)));
 
     /*//BONEMEALPOTION AKA FLOURISHING POTION
     public static final Holder<Potion> FLOURISHING_POTION = POTIONS.register("flourishing_potion",

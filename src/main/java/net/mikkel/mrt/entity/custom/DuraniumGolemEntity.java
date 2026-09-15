@@ -32,6 +32,7 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.event.EventHooks;
 import net.neoforged.neoforge.event.entity.EntityTeleportEvent;
 import org.jetbrains.annotations.Nullable;
+import org.spongepowered.asm.mixin.injection.At;
 
 public class DuraniumGolemEntity extends IronGolem
 {
@@ -52,16 +53,24 @@ public class DuraniumGolemEntity extends IronGolem
         super.registerGoals();
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new PanicGoal(this, 2));
-        this.goalSelector.addGoal(2, new DuraniumGolemLookAtPlayerGoal(this, Player.class, 6.0f));
+        //this.goalSelector.addGoal(2, new DuraniumGolemLookAtPlayerGoal(this, Player.class, 50.0f));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, true));
     }
 
     public static AttributeSupplier.Builder createAttributes()
     {   //Should this be "return Monster"? Instead?
         return IronGolem.createAttributes()
-                .add(Attributes.MAX_HEALTH, 15d)
+                .add(Attributes.MAX_HEALTH, 100d)
                 .add(Attributes.MOVEMENT_SPEED, 0.3f)
-                .add(Attributes.FOLLOW_RANGE, 24d);
+                .add(Attributes.FOLLOW_RANGE, 50d)
+                .add(Attributes.ATTACK_DAMAGE, 20d)
+                .add(Attributes.ATTACK_KNOCKBACK, 1.5d)
+                .add(Attributes.ARMOR, 15d)
+                .add(Attributes.ARMOR_TOUGHNESS, 4d)
+                .add(Attributes.SAFE_FALL_DISTANCE, 100d)
+                .add(Attributes.SCALE, 2)
+                .add(Attributes.STEP_HEIGHT, 2)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 1.0d);
     }
 
 
@@ -73,7 +82,7 @@ public class DuraniumGolemEntity extends IronGolem
         Vec3 movement = this.getDeltaMovement();
         if (!this.onGround() && movement.y < (double)0.0F)
         {
-            this.setDeltaMovement(movement.multiply((double)1.0F, 0.5, (double)1.0F));
+            //this.setDeltaMovement(movement.multiply((double)1.0F, 0.5, (double)1.0F));
         }
     }
 
@@ -114,9 +123,9 @@ public class DuraniumGolemEntity extends IronGolem
     {
         if (!this.level().isClientSide() && this.isAlive())
         {
-            double d0 = this.getX() + (this.random.nextDouble() - (double)0.5F) * (double)64.0F;
-            double d1 = this.getY() + (double)(this.random.nextInt(64) - 32);
-            double d2 = this.getZ() + (this.random.nextDouble() - (double)0.5F) * (double)64.0F;
+            double d0 = this.getX() + (this.random.nextDouble() - (double)0.5F) * (double)10.0F;
+            double d1 = this.getY() + (double)(this.random.nextInt(10) - 5);
+            double d2 = this.getZ() + (this.random.nextDouble() - (double)0.5F) * (double)10.0F;
             return this.teleport(d0, d1, d2);
         } else
         {
@@ -162,55 +171,33 @@ public class DuraniumGolemEntity extends IronGolem
         }
     }
 
-    //StoleWitherBoss Destroyblock Logic
-    private int destroyBlocksTick = 1;
-    protected void customServerAiStep()
-    {
-        if (this.destroyBlocksTick > 0)
-        {
-            //--this.destroyBlocksTick;
-            /*if (EventHooks.canEntityGrief(this.level(), this))
-            {
-                boolean flag = false;
-                int l = Mth.floor(this.getBbWidth() / 2.0F + 1.0F);
-                int i1 = Mth.floor(this.getBbHeight());
-
-                for(BlockPos blockpos : BlockPos.betweenClosed(this.getBlockX() - l, this.getBlockY(), this.getBlockZ() - l, this.getBlockX() + l, this.getBlockY() + i1, this.getBlockZ() + l))
-                {
-                    BlockState blockstate = this.level().getBlockState(blockpos);
-                    if (blockstate.canEntityDestroy(this.level(), blockpos, this) && EventHooks.onEntityDestroyBlock(this, blockpos, blockstate))
-                    {
-                        flag = this.level().destroyBlock(blockpos, true, this) || flag;
-                    }
-                }
-
-                if (flag) {
-                    this.level().levelEvent((Player)null, 1022, this.blockPosition(), 0);
-                }
-            }*/
-    }
-
-}
-
-
-    private void setupAnimationStates()
-    {
-        if(this.idleAnimationTimeout <= 0)
-        {
-            this.idleAnimationTimeout = 80; // X seconds times 20 ticks = the integer to loop.
-            this.idleAnimationState.start(this.tickCount);
-        }
-        else {--this.idleAnimationTimeout;}
-    }
-
-    @Override
-    public void tick()
-    {
-        super.tick();
-
-        if(this.level().isClientSide)
-        {
-            this.setupAnimationStates();
-        }
-    }
+//    //StolenWitherBoss Destroyblock Logic
+//    private int destroyBlocksTick = 0;
+//    protected void customServerAiStep()
+//    {
+//        if (this.destroyBlocksTick > 0)
+//        {
+//    }
+//
+//}
+//    private void setupAnimationStates()
+//    {
+//        if(this.idleAnimationTimeout <= 0)
+//        {
+//            this.idleAnimationTimeout = 80; // X seconds times 20 ticks = the integer to loop.
+//            this.idleAnimationState.start(this.tickCount);
+//        }
+//        else {--this.idleAnimationTimeout;}
+//    }
+//
+//    @Override
+//    public void tick()
+//    {
+//        super.tick();
+//
+//        if(this.level().isClientSide)
+//        {
+//            this.setupAnimationStates();
+//        }
+//    }
 }

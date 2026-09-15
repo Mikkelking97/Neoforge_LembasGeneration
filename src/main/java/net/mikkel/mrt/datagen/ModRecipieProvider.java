@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -221,7 +222,18 @@ public class ModRecipieProvider extends RecipeProvider implements IConditionBuil
                 .unlockedBy("has_coal", has (Items.COAL))
                 .save(recipeOutput, "alchemistcoal_from_charcoal");
 
+        //Generic Crafting
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.WITHER_ROSE, 5)
+                .requires(Items.WITHER_SKELETON_SKULL)
+                .requires(Items.ROSE_BUSH)
+                .unlockedBy("has_wither_skeleton_skull", has (Items.WITHER_SKELETON_SKULL))
+                .save(recipeOutput, "wither_rose_from_rose_bush");
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.WITHER_ROSE, 1)
+                .requires(Items.WITHER_SKELETON_SKULL)
+                .requires(Items.POPPY)
+                .unlockedBy("has_wither_skeleton_skull", has (Items.WITHER_SKELETON_SKULL))
+                .save(recipeOutput, "wither_rose_from_poppy");
 
     }
 

@@ -1,4 +1,5 @@
-// 1.21.1	2025-07-22T01:22:25.077152	Registries
+// 1.21.1	2026-09-15T12:45:23.4340879	Registries
 b8f5549e67cd860d9f2044b83c5c386198fd1b8f data/mrt/neoforge/biome_modifier/add_duranium_ore.json
+50445623ac03b624070124e4dd32af5a0fcab191 data/mrt/neoforge/biome_modifier/spawn_duraniumgolem.json
 4f48f07303cdd103f0455ccb3c9616248d13a3f1 data/mrt/worldgen/configured_feature/duranium_ore.json
 328be2ef161af823a188d688432fd73560336229 data/mrt/worldgen/placed_feature/duranium_ore_placed.json

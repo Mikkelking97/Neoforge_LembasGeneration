@@ -33,6 +33,30 @@
   "item.minecraft.splash_potion.effect.supreme_flight_potion": "Potion of Supreme Flight",
   "item.minecraft.lingering_potion.effect.supreme_flight_potion": "Potion of Supreme Flight",
 
+  "item.minecraft.potion.effect.hero_potion_i": "Potion of the Hero",
+  "item.minecraft.splash_potion.effect.hero_potion_i": "Potion of the Hero",
+  "item.minecraft.lingering_potion.effect.hero_potion_i": "Potion of the Hero",
+
+  "item.minecraft.potion.effect.hero_potion_ii": "Potion of the Hero II",
+  "item.minecraft.splash_potion.effect.hero_potion_ii": "Potion of the Hero II",
+  "item.minecraft.lingering_potion.effect.hero_potion_ii": "Potion of the Hero II",
+
+  "item.minecraft.potion.effect.hero_potion_iii": "Potion of the Hero III",
+  "item.minecraft.splash_potion.effect.hero_potion_iii": "Potion of the Hero III",
+  "item.minecraft.lingering_potion.effect.hero_potion_iii": "Potion of the Hero III",
+
+  "item.minecraft.potion.effect.hero_potion_iv": "Potion of the Hero IV",
+  "item.minecraft.splash_potion.effect.hero_potion_iv": "Potion of the Hero IV",
+  "item.minecraft.lingering_potion.effect.hero_potion_iv": "Potion of the Hero IV",
+
+  "item.minecraft.potion.effect.hero_potion_v": "Potion of the Hero V",
+  "item.minecraft.splash_potion.effect.hero_potion_v": "Potion of the Hero V",
+  "item.minecraft.lingering_potion.effect.hero_potion_v": "Potion of the Hero V",
+
+  "item.minecraft.potion.effect.liquid_luck_i": "Potion of Liquid Luck",
+  "item.minecraft.splash_potion.effect.liquid_luck_i": "Potion of Liquid Luck",
+  "item.minecraft.lingering_potion.effect.liquid_luck_i": "Potion of Liquid Luck",
+
   "item.mrt.duranium_pickaxe": "Duranium Pickaxe",
   "item.mrt.duranium_sword": "Duranium Sword",
   "item.mrt.duranium_axe": "Duranium Axe",
